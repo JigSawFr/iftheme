@@ -96,7 +96,7 @@ function iftheme_setup() {
 	require( get_template_directory() . '/inc/theme-options.php' );
 	
 	// Load up our post meta box .
-	require( get_template_directory() . '/inc/events/if-events.php' );
+	//require( get_template_directory() . '/inc/events/if-events.php' );
 
 	//include user-role antenna file
 	require_once( get_template_directory() . "/inc/if-user.php");
