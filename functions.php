@@ -759,7 +759,7 @@ function if_display_posts_listing ( $query ) {
 		$query->set( 'order', 'ASC' );
 	}
 }
-add_action( 'pre_get_posts', 'if_display_posts_listing' );
+//add_action( 'pre_get_posts', 'if_display_posts_listing' );
 
 /**
 * Alter main query for archive pages
@@ -827,7 +827,7 @@ function if_display_posts_on_archive_pages( $query ) {
 		$query->set( 'meta_query', $meta_query );
 	}
 }
-add_action( 'pre_get_posts', 'if_display_posts_on_archive_pages' );
+//add_action( 'pre_get_posts', 'if_display_posts_on_archive_pages' );
 
 //get meta data of post for display on page
 function get_meta_if_post($pid = ''){
@@ -1150,7 +1150,7 @@ function unregister_default_wp_widgets() {
     unregister_widget('WP_Widget_RSS');
     unregister_widget('WP_Widget_Tag_Cloud');
 }
-add_action('widgets_init', 'unregister_default_wp_widgets', 1);
+//add_action('widgets_init', 'unregister_default_wp_widgets', 1);
 
 function register_default_wp_widgets(){
 	//cf.unregister_default_wp_widgets() to add the ones you need here
@@ -1159,7 +1159,7 @@ function register_default_wp_widgets(){
     register_widget('WP_Widget_Text');
     register_widget('WP_Widget_Pages');
 }
-add_action('widgets_init', 'register_default_wp_widgets', 1);
+//add_action('widgets_init', 'register_default_wp_widgets', 1);
 
 
 //Admin  messages
