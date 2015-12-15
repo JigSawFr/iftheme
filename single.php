@@ -70,35 +70,6 @@
 					<p><?php  the_category(', ') ?></p>
 				</div><!--#post-meta-->
 			</article>
-
-		<?php if('post' == get_post_type()): ?>
-		<!-- ADDITIONAL INFOS -->
-			<div class="booking-container add-infos">
-				<h3 class="booking-title"><span class="picto-book"></span><?php _e("Useful informations",'iftheme'); ?></h3>
-				<div class="form-content bxshadow">
-	            <h4><?php echo $data['lieu'];?></h4>
-	            <p class="date-time"><?php echo $start . $end;?> <?php echo $data['time'] != str_replace(' / ', '', $data['end']) ? ' - ' .$data['time'] : '';?></p>
-	            <p>
-	              <?php echo $data['adresse'] ? $data['adresse'].'<br />':'';?>
-	              <?php echo $data['adressebis'] ? $data['adressebis'].'<br />':'';?>
-	              <?php echo $data['zip'] ? $data['zip'] . ' - ':''; ?> <?php echo $data['city'];?> <?php $data['pays'] ? ' - '.$data['pays']:'';?><br />
-	              <?php echo $data['tel'] ? $data['tel'].'<br />':'';?>
-	              <?php echo $data['event_mail'] ? '<a href="mailto:'. $data['event_mail'] .'">'. $data['event_mail'] .'</a><br />' : '';?>
-	              <?php echo $data['link1'] ? '<a href="'. $data['link1'] .'" target="_blank">'. $data['link1'] .'</a><br />' : '';?>
-	              <?php echo $data['link2'] ? '<a href="'. $data['link2'] .'" target="_blank">'. $data['link2'] .'</a><br />' : '';?>
-	              <?php echo $data['link3'] ? '<a href="'. $data['link3'] .'" target="_blank">'. $data['link3'] .'</a><br />' : '';?>
-				</div>
-			</div><!-- #booking-container -->
-		<?php endif;?>
-		<!-- BOOKING FORM -->
-		<?php if($book == 'on'):?>
-			<div class="booking-container">
-				<h3 class="booking-title"><span class="picto-book"></span><?php _e("Booking",'iftheme');?></h3>
-				<div class="form-content bxshadow clearfix">
-					<?php echo get_booking_form(); ?>
-				</div>
-			</div><!-- #booking-container -->
-		<?php endif;?>
 			
 		</div><!-- #post-## -->
 
